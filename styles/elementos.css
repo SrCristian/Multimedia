@@ -1,0 +1,92 @@
+#video, #imagenAudio{
+    width: 100%;
+    height: 30vw;
+}
+h1{
+    text-align: center;
+}
+#imagenAudio{
+    stroke:red;
+    fill:red;
+    background-repeat: repeat-y;
+    background-position: center;
+}
+.logotipo{
+    width: 40vw;
+    height: 10vw;
+}
+.header,.footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.seleccion{
+    border: 1px solid white;
+    font-size: 0.9em;
+    background:lightblue;
+}
+
+.datos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 10%;
+}
+
+.controles{
+    border: 1px solid green;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 5vw;
+}
+
+.ejecutado{
+    fill:greenyellow;
+}
+
+.controles svg{
+    fill:rgba(0, 153, 255, 0.1);
+    stroke:black;
+    stroke-width:4;
+}
+
+svg, #subir, #bajar{
+    width: 6vw;
+    height: 3vw;
+}
+
+#play,#silencio,#imagenAudio,#audio,.ejecutado{
+    display: none;
+}
+
+.controles > svg:hover { 
+    fill:rgba(0, 153, 255, 1);
+    transform: scale(1.4)
+}
+
+.controles > svg:active { 
+    fill:darkblue;
+    transform: scale(1.4)
+}
+
+.controles > input:hover { 
+    background:rgba(0, 153, 255, 1);
+    transform: scale(1.4)
+}
+
+.controles > input:active { 
+    background:darkblue;
+    transform: scale(1.4)
+}
+
+.seleccion:hover { 
+    background:blue;
+    color: white;
+}
+
+.seleccion:active { 
+    background:darkblue;
+    color: white;
+}

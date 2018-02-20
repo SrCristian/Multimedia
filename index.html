@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/elementos.css">
+    <script type="text/javascript" src="scripts/jsonReproduccion.js"></script>
+    <script type="text/javascript" src="scripts/index.js"></script>
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+</head>
+<body onload="loadPage()">
+    <div class="contenedor">
+        <header class="header">
+            <svg class="logotipo" viewBox="0 0 100 100" style="opacity:1;fill:#f7f7f7;" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                <path class="inner-shape" transform="translate(-100,10) scale(0.8)" d="M71.399,19.222c-5.019-3.116-9.753-4.342-14.487-7.459C53.976,9.78,49.904,5.059,46.496,1 c-0.663,6.514-2.651,9.158-4.923,11.046c-4.829,3.776-7.859,4.909-12.025,7.176C26.044,21.016,7.012,32.345,7.012,56.704 S27.559,99,50.379,99s42.609-16.522,42.609-41.541S74.429,21.11,71.399,19.222z M71.947,90.114 c-0.473,0.472-4.829,3.493-9.942,3.965c-5.114,0.472-12.025,0.756-16.192-3.021c-0.663-0.661-0.473-1.605,0-1.983 c0.473-0.377,0.852-0.661,1.42-0.661c0.569,0,0.473,0,0.758,0.189c1.894,1.51,4.734,2.738,10.795,2.738s10.321-1.699,12.215-3.116 c0.852-0.661,1.231-0.094,1.325,0.283C72.42,88.888,72.609,89.454,71.947,90.114z M55.376,81.524 c1.042-0.944,2.745-2.455,4.356-3.116c1.609-0.661,2.462-0.566,3.977-0.566s3.125,0.094,4.261,0.85 c1.136,0.756,1.799,2.455,2.178,3.399c0.378,0.944,0,1.51-0.758,1.889c-0.663,0.377-0.758,0.189-1.42-1.039 c-0.663-1.227-1.231-2.455-4.545-2.455c-3.314,0-4.356,1.133-5.965,2.455c-1.609,1.322-2.178,1.793-2.745,1.039 C54.145,83.223,54.335,82.467,55.376,81.524z M80.468,82.278c-3.409-0.283-10.226-10.858-14.582-11.046 c-5.492-0.189-17.423,11.424-26.796,11.424c-5.681,0-7.386-0.85-9.279-2.077c-2.841-1.983-4.261-5.004-4.167-9.158 c0.095-7.364,7.007-14.257,15.718-14.351c11.079-0.095,18.748,10.952,24.335,10.857c4.734-0.094,13.824-9.347,18.274-9.347 c4.734,0,6.06,4.91,6.06,7.836c0,2.926-0.947,8.214-3.219,11.518C84.54,81.24,83.12,82.467,80.468,82.278z"></path>
+                <text x=0 y=90>Reproductor</text>
+            </svg>
+            <svg viewBox="0 0 100 100" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                <path d="M89.286,78.404c0,4.465-1.358,7.989-4.073,10.575c-2.717,2.585-6.325,3.878-10.826,3.878H25.614 c-4.501,0-8.11-1.293-10.826-3.878c-2.716-2.586-4.074-6.11-4.074-10.575c0-1.971,0.064-3.896,0.195-5.775 c0.13-1.878,0.391-3.906,0.781-6.083c0.391-2.176,0.883-4.193,1.479-6.055c0.594-1.859,1.395-3.673,2.399-5.44 c1.004-1.767,2.157-3.273,3.46-4.521c1.302-1.246,2.892-2.24,4.771-2.985c1.878-0.744,3.953-1.116,6.222-1.116 c0.335,0,1.116,0.4,2.344,1.2c1.228,0.8,2.613,1.693,4.157,2.679c1.543,0.986,3.552,1.879,6.027,2.679 c2.474,0.8,4.957,1.199,7.45,1.199c2.491,0,4.975-0.399,7.449-1.199c2.474-0.8,4.482-1.692,6.027-2.679 c1.543-0.985,2.93-1.878,4.157-2.679c1.228-0.8,2.009-1.2,2.344-1.2c2.269,0,4.343,0.372,6.222,1.116 c1.878,0.745,3.469,1.739,4.771,2.985c1.302,1.247,2.455,2.754,3.46,4.521c1.004,1.768,1.804,3.581,2.399,5.44 c0.595,1.861,1.088,3.879,1.479,6.055c0.391,2.177,0.65,4.205,0.781,6.083C89.22,74.507,89.286,76.433,89.286,78.404z M65.151,13.421c4.186,4.185,6.277,9.235,6.277,15.15c0,5.916-2.092,10.966-6.277,15.151S55.916,50,50,50 c-5.916,0-10.966-2.093-15.151-6.278c-4.186-4.185-6.278-9.235-6.278-15.151c0-5.915,2.093-10.965,6.278-15.15 C39.035,9.235,44.085,7.143,50,7.143C55.916,7.143,60.965,9.235,65.151,13.421z" transform="translate(0,0) scale(1)" style="opacity:1;fill:#f7f7f7;"></path>
+            </svg>
+        </header>
+        <article class="main">
+            <div class="reproductor">
+                <h1 id="titulo"></h1>
+                <video id='video' controls autoplay >
+                    <source id="mp4_src" src='' type="video/mp4">
+                    <source id="ogg_src" src='' type="video/ogg">
+                    <source id="webm_src" src='' type="video/webm">
+                    <track id="trackSub" kind="subtitles" srclang="es" src="" label="Spanish" default="true">
+                </video>
+                <svg id="imagenAudio" viewBox="0 0 600 600" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                    <path d="m5 40 L15 40 L15 60 L5 60 Z" />
+                    <path d="m20 40 L70 5 L70 95 L20 60Z" />
+                    <path style="fill:none;" d="M 73 0 q 30 50 0 100" />
+                    <path style="fill:none;" d="M 83 0 q 30 50 0 100" />
+                </svg>
+                <audio id="audio" autoplay>
+                    <source id="mp3_src" src='' type="audio/mpeg">
+                </audio>
+            </div>
+            <div class="controles">
+                    <svg id="play" viewBox="0 0 100 100" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                        <path d="M5 0 L100 50 L5 95 Z" />
+                    </svg>
+
+                    <svg id="pausa" viewBox="0 0 100 100" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                        <path d="M20 0 L20 100 L40 100 L40 0 Z" />
+                        <path d="M80 0 L80 100 L60 100 L60 0 Z" />
+                    </svg>
+
+                    <svg id="adelantar" viewBox="0 0 100 100" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                        <path d="M5 0 L50 30 L50 0 L100 50 L50 100 L50 70 L5 95 Z" />
+                    </svg>
+
+                    <svg id="volumen" viewBox="0 0 100 100" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                        <path d="m5 40 L15 40 L15 60 L5 60 Z" />
+                        <path d="m20 40 L70 5 L70 95 L20 60Z" />
+                        <path style="fill:none;" d="M 73 0 q 30 50 0 100" />
+                        <path style="fill:none;" d="M 83 0 q 30 50 0 100" />
+
+                    </svg>
+
+                    <svg id="silencio" viewBox="0 0 100 100" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                        <path d="m5 40 L15 40 L15 60 L5 60 Z" />
+                        <path d="m20 40 L70 5 L70 95 L20 60Z" />
+                        <path d="m10 10 L90 90 Z" />
+                        <path d="m10 90 L90 10 Z" />
+                    </svg>
+
+                    <svg id="subir" viewBox="0 0 100 100" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                        <path d="m1 45 L45 45 L45 1 L55 1 L55 45 L99 45 L99 55 L55 55 L55 99 L45 99 L45 55 L1 55 Z" />
+                    </svg>
+
+                    <svg id="bajar" viewBox="0 0 100 100" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                        <path d="m1 45 L1 55 L99 55 L99 45 Z" />
+                    </svg>
+
+                    <div id="tiempo"></div>
+            </div>
+        </article>
+        <aside class="aside izquierda">
+        </aside>
+        <footer class="footer">
+                <div id="log"></div>
+                <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Licencia Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"></a>
+                Cristian Ramos Baute
+        </footer>
+    </div>
+</body>
+</html>
